@@ -1,4 +1,4 @@
-<h3>Skill set | QA | Junior</h3>
+<h3>Skillset | QA | Junior</h3>
 
 <h5>Книги</h5>
 
