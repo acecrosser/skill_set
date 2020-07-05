@@ -7,9 +7,11 @@ API_TOKEN = ''
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
+
 @dp.message_handler(commands=['start'])
 async def send_welcom(message: types.Message):
     await message.answer('Привет, задай любой вопрос и получи ответ!')
+
 
 @dp.message_handler()
 async def send_answer(message: types.Message):
