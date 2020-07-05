@@ -54,7 +54,6 @@ namespace ConsoleCalcul
                         Console.WriteLine("Решение:");
                         Console.WriteLine(result[3]);
                     }
-                    
                 }
                 else
                 {
