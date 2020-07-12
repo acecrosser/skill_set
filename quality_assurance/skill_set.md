@@ -19,9 +19,7 @@
 
 <h4>Практика</h4>
 
-* Консольный калькулятор на C# и простенькие unit-тесты по его проверке | dir /calculator_c
-* Chrome
-* Телеграм бот "Философ"
-* Телеграм бот "Magic bot" [@ballanswersbot](https://t.me/ballanswersbot) | 
+* Консольный калькулятор на C# и простенький unit-тесты по его проверке
+* Телеграм бот "Magic bot" [@ballanswersbot](https://t.me/ballanswersbot)
 
 
