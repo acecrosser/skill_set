@@ -8,3 +8,6 @@
 * Скотт Шакон, Бен Страуб, "Pro GIT"
 
 
+<h4>Сертификаты</h4>
+
+* Сертификат - International Software Testing Qualifications Board
