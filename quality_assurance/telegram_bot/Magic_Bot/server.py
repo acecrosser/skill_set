@@ -1,4 +1,3 @@
-import logging
 import random
 from aiogram import Bot, Dispatcher, executor, types
 
