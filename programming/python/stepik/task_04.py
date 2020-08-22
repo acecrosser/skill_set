@@ -22,3 +22,8 @@ def modify_list(l):
     del l[:]
     for i in xx:
         l.append(i)
+
+
+lst = [10, 5, 8, 3]
+modify_list(lst)
+print(lst)
