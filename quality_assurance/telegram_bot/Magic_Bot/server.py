@@ -1,7 +1,7 @@
 import random
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = ''
+API_TOKEN = '1328164745:AAFvR9tm2ivPlJsU1OGCpjjjdoOXct3GjaE'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
