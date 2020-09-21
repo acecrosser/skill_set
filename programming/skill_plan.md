@@ -1,4 +1,4 @@
-<h3>Skillplan | Programmer</h3>
+<h3>Programmer</h3>
 
 <h4>Книги</h4>
 
