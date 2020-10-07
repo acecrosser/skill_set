@@ -15,7 +15,9 @@
 
 * Решение задач по курсу от Stepik
 * Решение задач по курсу от SkillBox
+* Django-проект (в режиме разработки) [Ссылка на прототип](http://78.29.38.1:5017/account/register/)
+* Telegram-bot домашней бухгалтерии (в режиме разработки) [@MyTimlBot](https://t.me/MyTimlBot)
 
 <h4>Сертификаты</h4>
 
-* 
+* [Сертификат Stepik c отличием](https://stepik.org/cert/393271)
