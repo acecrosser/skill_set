@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>300</y>
+      <width>369</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="modelColumn">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string comment="first_">Регистрация и фискализация одной единицы ККТ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Комплексная настройка Контур.Маркета</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Настройка Контур.Маркета</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Перерегистрация ККТ без замены  ФН</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Настройки под режим ЕНВД</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Перерегистрация ККТ с заменой  ФН</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Снятие с учета ККТ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Настройка Эквайринга Ingenico IPP320</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Прошивка ККТ (ФФД 1.05, включая НДС 20%, Маркирвка)</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>25</y>
+      <width>371</width>
+      <height>256</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_company">
+       <property name="text">
+        <string>Наименование </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="name_company"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_inn">
+       <property name="text">
+        <string>ИНН</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="inn_company"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_kpp">
+       <property name="text">
+        <string>КПП</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="kpp_company"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_bill">
+       <property name="text">
+        <string>№ счета</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="number_bill"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_address">
+       <property name="text">
+        <string>Адрес</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="address_work"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>550</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="printReestr">
+       <property name="text">
+        <string>Печать реестра</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="printRequest">
+       <property name="text">
+        <string>Печать заявки</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>342</y>
+      <width>371</width>
+      <height>204</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_kkt">
+       <property name="text">
+        <string>Модель ККТ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="model_kkt"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_kkt_serial">
+       <property name="text">
+        <string>Заводской номер ККТ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="serial_kkt"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_fn">
+       <property name="text">
+        <string>Заводкой номер ФН</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="serial_fn"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_name">
+       <property name="text">
+        <string>ФИО Внедренца</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="spec_name">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
