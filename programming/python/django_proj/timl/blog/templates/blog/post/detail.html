@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ post.title }}</h1>
+    <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
+    {{ post.body|markdown }}
+
+    <p>
+        <a href="{% url 'blog:post_share' post.id %}">Share this post</a>
+    </p>
+
+    {% with comments.count as total_comments %}
+        <h2>{{ total_comments}} comment{{ total_comments|pluralize}}</h2>
+    {% endwith %}
+    <br>
+    {% for comment in comments %}
+    <div class="comment">
+        <a class="info">
+            Comment {{ forloop.counter }} by {{ comment.name }}
+            {{ comment.created }}
+            <br>
+        </a>
+        {{ comment.body }}
+        <br><br>
+    </div>
+    {% empty %}
+        <p>Пока нет комментарий</p>
+    {% endfor %}
+
+    {% if new_comment %}
+        <h2>Ваш комментарий был добавлен</h2>
+    {% else %}
+        <h2>Добавить свой комментарий</h2>
+        <form action="." method="post">
+            {{ comment_form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Отправить"></p>
+        </form>
+    {% endif %}
+
+{% endblock %}
