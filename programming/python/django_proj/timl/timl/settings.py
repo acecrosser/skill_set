@@ -109,9 +109,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Email send
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_HOST_USER = 'acecrosser@yandex.ru'
-EMAIL_HOST_PASSWORD = 'AchlXd6ipXR764ZKnoTh'
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
