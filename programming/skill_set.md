@@ -18,6 +18,7 @@
 * Django-проект (в режиме разработки) [Ссылка на прототип](http://78.29.38.1:5017/account/register/)
 * Telegram-bot домашней бухгалтерии (в режиме разработки) [@MyTimlBot](https://t.me/MyTimlBot)
 * React JS. Ознокомительный проект [Ссылка](https://batman-must-win.netlify.app/)
+*
 
 <h4>Сертификаты</h4>
 
