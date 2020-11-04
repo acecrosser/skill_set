@@ -1,15 +1,15 @@
 import random
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = '1328164745:AAFvR9tm2ivPlJsU1OGCpjjjdoOXct3GjaE'
+API_TOKEN = ''
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
 
 @dp.message_handler(commands=['start'])
-async def send_welcom(message: types.Message):
-    await message.answer('Привет, задай любой вопрос и получи ответ!')
+async def send_welcome(message: types.Message):
+    await message.answer('Привет, задай любой вопрос и получишь ответ!')
 
 
 @dp.message_handler()
