@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    SKILL SET
+{% endblock %}
+
+{% block content %}
+    <div class="row pb-5">
+        <div class="col-5 col-md-4">
+            <center><h3>HARD SKILL</h3></center>
+            <hr class="bg-white" />
+            {% for hard in skills %}
+                {% if hard.hard == None %}
+                {% else %}
+                    <li class="ml-3"> {{ hard.hard }} </li>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-5 col-md-4">
+            <center><h3>SOFT SKILL</h3></center>
+            <hr class="bg-white" />
+            {% for soft in skills %}
+                {% if soft.soft == None %}
+                {% else %}
+                   <li class="ml-3"> {{ soft.soft }} </li>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-5 col-md-4">
+            <center><h3>OTHER SKILL</h3></center>
+            <hr class="bg-white" />
+            {% for other in skills %}
+                {% if other.other == None %}
+                {% else %}
+                    <li class="ml-3"> {{ other.other }} </li>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col mb-4">
+        <div class="card bg-transparent border-white">
+<!--          <img src="{{ url_for('static', filename='images/dd_2.jpg') }}" class="card-img-top" alt="..место картинки">-->
+          <div class="card-body">
+            <h5 class="card-title">Книги</h5>
+            <p class="card-text">
+                {% for books in skills %}
+                {% if books.books == None %}
+                {% else %}
+                    <li class="ml-4"> {{ books.books }} </li>
+                {% endif %}
+                {% endfor %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card bg-transparent border-white">
+<!--          <img src="{{ url_for('static', filename='images/bb_2.jpg') }}" class="card-img-top" alt="...место картинки">-->
+          <div class="card-body">
+            <h5 class="card-title">В процессе изучения</h5>
+            <p class="card-text">
+                {% for progress in skills %}
+                {% if progress.in_progress == None %}
+                {% else %}
+                <li class="ml-4"> {{ progress.in_progress|safe }} </li>
+                {% endif %}
+                {% endfor %}
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

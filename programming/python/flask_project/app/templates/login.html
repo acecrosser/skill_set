@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ 'Авторизация'}}
+{% endblock %}
+
+
+{% block content_title %}
+<div class="offset-md-4 col-md-4">
+    <h3>Авторизация</h3>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="offset-md-4 col-md-4" >
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+            <div>
+                {{ form.username.label }} <br>
+                {{ form.username(class='form-control') }} <br>
+                {% for error in form.username.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+                {{ form.password.label }} <br>
+                {{ form.password(class='form-control') }} <br>
+                {% for error in form.password.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+                {{ form.remember_me() }} {{ form.remember_me.label }}
+            </div>
+        <button type="submit" class="btn btn-warning">Войти</button>
+    </form>
+</div>
+{% endblock %}

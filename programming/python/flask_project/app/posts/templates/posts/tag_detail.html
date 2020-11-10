@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Найденные работы - {{ tag.name }}
+{% endblock %}
+
+{% block content_title %}
+    <h2>Найденные работы по тегу - "{{ tag.name }}":</h2>
+{% endblock %}
+
+{% block content %}
+    {% for post in post %}
+        <a href="{{ url_for('posts.post_detail', slug=post.slug) }}"> {{ post.title }} </a><br>
+    {% endfor %}
+
+    {{ post.body }}
+{% endblock %}
+{{ url_for('posts.post_detail', slug=tag.slug) }}

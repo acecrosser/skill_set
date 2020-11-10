@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    PROFILE
+{% endblock %}
+
+{% block content_title %}
+    <h2>PROFILE</h2>
+    <br>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-2 pb-3">
+    <div class="col-4">
+        <div class="card" style="">
+            <img src="{{ url_for('static', filename='images/me.jpg') }}" class="card-img-top">
+        </div>
+    </div>
+    <div class="col-8">
+        <table class="table text-white">
+            <tbody>
+            <tr>
+                <th scope="row">ФИО</th>
+                <td>{{ profile.full_name }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Эл.почта</th>
+                <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+            </tr>
+            <tr>
+                <th scope="row">Возвраст</th>
+                <td>{{ profile.get_age() }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Телеграм</th>
+                <td><a href="https://t.me/{{ profile.telegram }}">{{ profile.telegram }}</a></td>
+            </tr>
+            <tr>
+                <th scope="row">Оброзование</th>
+                <td>{{ profile.education }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Языки</th>
+                <td>{{ profile.languages }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Опыт:</th>
+                <td>{{ profile.experience|safe }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm text-white">
+        <div class="card bg-transparent border-white mb-3">
+            <div class="card-header border-white"><b>О себе:</b></div>
+            <div class="card-body">
+                <center><p class="card-text"><i>{{ profile.about_me }}</i></p></center>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card bg-transparent border-white mb-3">
+            <div class="card-header border-white"><b>Github:</b></div>
+            <div class="card-body">
+                <center><p class="card-text"><a href="{{profile.links }}">{{profile.links }}</a></p></center>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card bg-light bg-transparent border-white mb-3">
+            <div class="card-header border-white"><b>Дополнительные контакты:</b></div>
+            <div class="card-body">
+                <p class="card-text p-0">
+                    Номер телефона: <b>{{ profile.number }}</b>
+                    <br>{{ profile.contacts|safe }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

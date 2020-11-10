@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ 'Регистрация'}}
+{% endblock %}
+
+
+{% block content_title %}
+<div class="offset-md-4 col-md-4">
+    <h3>Регистрация</h3>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="offset-md-4 col-md-4">
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+            <div>
+                {{ form.username.label }} <br>
+                {{ form.username(class='form-control') }} <br>
+                {% for error in form.username.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+
+                {{ form.mail.label }} <br>
+                {{ form.mail(class='form-control') }} <br>
+                {% for error in form.mail.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+
+                {{ form.password.label }} <br>
+                {{ form.password(class='form-control') }} <br>
+                {% for error in form.password.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+
+                {{ form.password2.label }} <br>
+                {{ form.password2(class='form-control') }} <br>
+                {% for error in form.password2.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+        <button type="submit" class="btn btn-warning">Регистрация</button>
+    </form>
+</div>
+{% endblock %}

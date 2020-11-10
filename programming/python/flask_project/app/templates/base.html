@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/main.css') }}">
+    <style>body {background-image: url({{ url_for('static', filename='images/background_2b.png') }});}</style>
+    <title>{% block title %} HOME {% endblock %} / TIML </title>
+</head>
+<body>
+<div class="menu">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href=" {{ url_for('index') }} ">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href=" {{ url_for('posts.index')}} ">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href=" {{ url_for('skill.index')}} ">SKILL SET</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href=" {{ url_for('profile.index')}} ">PROFILE</a>
+        </li>
+        <li class="nav-item">
+            {% if current_user.is_anonymous %}
+            {% else %}
+            <a class="nav-link" href="{{ url_for('posts.create_post') }}">CREATE</a>
+            {% endif %}
+        </li>
+        <li class="nav-item">
+            {% if current_user.is_anonymous %}
+            {% else %}
+            <a class="nav-link" href="/admin">ADMIN</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>
+<div class="fixed">
+    <div class="container-md mt-1 pb-1">
+        {% with message = get_flashed_messages() %}
+        {% if message %}
+            <center>
+                {% for message in message %}
+                    {{ message }}
+                {% endfor %}
+            </center>
+        {% endif %}
+        {% endwith %}
+        <br>
+        {% block content_title %}{% endblock %}
+        {% block content %}{% endblock %}
+        <br><br>
+    </div>
+</div>
+
+<footer class="fixed-bottom p-2" style="background: #">
+    <center>
+        <font size="2">Сopyright by acecrosser / Powered by Flask<br>
+        <a href='https://www.freepik.com/photos/abstract'>Abstract photo created by wirestock - www.freepik.com</a>
+    </center>
+</footer>
+</body>
+</html>

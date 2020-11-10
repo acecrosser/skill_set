@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Форма редактирование
+{% endblock %}
+
+{% block content_title %}
+<div class="offset-md-2 col-md-8">
+    <h2>Форма редактирование</h2>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="offset-md-2 col-md-8">
+        <form action="{{ url_for('posts.edit_post', slug=find_post.slug) }}" method="POST">
+                <div class="form-group">
+                    {{ form.title.label }} <br>
+                    {{ form.title(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.body.label }} <br>
+                    {{ form.body(class="form-control") }}
+                </div>
+                    {{ ckeditor.load(pkg_type="full") }}
+                    {{ ckeditor.config(name='body') }}
+            <button type="submit" class="btn btn-warning">Сохранить</button>
+        </form>
+    </div>
+{% endblock %}
