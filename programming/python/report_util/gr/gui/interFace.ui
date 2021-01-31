@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>391</width>
-    <height>603</height>
+    <width>400</width>
+    <height>620</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Утилита внедрения</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="ico">
+    <normaloff>../util_ico.png</normaloff>
+    <normalon>../util_ico.png</normalon>../util_ico.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QComboBox" name="comboBox">
@@ -48,11 +76,6 @@
     </item>
     <item>
      <property name="text">
-      <string>Настройки под режим ЕНВД</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>Перерегистрация ККТ с заменой  ФН</string>
      </property>
     </item>
@@ -63,22 +86,22 @@
     </item>
     <item>
      <property name="text">
-      <string>Настройка Эквайринга Ingenico IPP320</string>
+      <string>Прошивка ККТ</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Прошивка ККТ (ФФД 1.05, включая НДС 20%, Маркирвка)</string>
+      <string>Пустой бланк</string>
      </property>
     </item>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>25</y>
       <width>371</width>
-      <height>256</height>
+      <height>265</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -134,16 +157,23 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>550</y>
-      <width>221</width>
+      <x>10</x>
+      <y>560</y>
+      <width>371</width>
       <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="makeEmail">
+       <property name="text">
+        <string>Создать письмо</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="printReestr">
        <property name="text">
@@ -160,13 +190,13 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>342</y>
       <width>371</width>
-      <height>204</height>
+      <height>211</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
