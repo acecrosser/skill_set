@@ -223,7 +223,7 @@
      <item>
       <widget class="QLabel" name="label_fn">
        <property name="text">
-        <string>Заводкой номер ФН</string>
+        <string>Заводcкой номер ФН</string>
        </property>
       </widget>
      </item>

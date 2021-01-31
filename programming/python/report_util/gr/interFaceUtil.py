@@ -202,7 +202,7 @@ class Ui_mainWindow(object):
         self.printRequest.setText(QCoreApplication.translate("mainWindow", u"\u041f\u0435\u0447\u0430\u0442\u044c \u0437\u0430\u044f\u0432\u043a\u0438", None))
         self.label_kkt.setText(QCoreApplication.translate("mainWindow", u"\u041c\u043e\u0434\u0435\u043b\u044c \u041a\u041a\u0422", None))
         self.label_kkt_serial.setText(QCoreApplication.translate("mainWindow", u"\u0417\u0430\u0432\u043e\u0434\u0441\u043a\u043e\u0439 \u043d\u043e\u043c\u0435\u0440 \u041a\u041a\u0422", None))
-        self.label_fn.setText(QCoreApplication.translate("mainWindow", u"\u0417\u0430\u0432\u043e\u0434\u043a\u043e\u0439 \u043d\u043e\u043c\u0435\u0440 \u0424\u041d", None))
+        self.label_fn.setText(QCoreApplication.translate("mainWindow", u"\u0417\u0430\u0432\u043e\u0434c\u043a\u043e\u0439 \u043d\u043e\u043c\u0435\u0440 \u0424\u041d", None))
         self.label_name.setText(QCoreApplication.translate("mainWindow", u"\u0424\u0418\u041e \u0412\u043d\u0435\u0434\u0440\u0435\u043d\u0446\u0430", None))
         self.spec_name.setText("")
     # retranslateUi
